@@ -1,0 +1,13 @@
+@define-color foreground #e0def4;
+@define-color background #191724;
+
+* {
+  background-color: @background;
+  color: @foreground;
+
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-family: Fira Code Nerd Font;
+  font-size: 12px;
+}
