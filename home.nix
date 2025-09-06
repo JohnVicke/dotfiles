@@ -19,6 +19,8 @@
 
   home.packages = with pkgs; [
     nerd-fonts.fira-code
+      btop
+      fastfetch
       curl
       fd
       eza
@@ -43,6 +45,11 @@
     };
     hyprlock = {
       enable = true;
+      settings = {
+        auth = {
+          "fingerprint:enabled" = true;
+        };
+      };
     };
     zoxide = {
       enable = true;
@@ -77,6 +84,7 @@
     direnv = {
       enable = true;
       nix-direnv.enable = true;
+      enableZshIntegration = true;
     };
   };
 }

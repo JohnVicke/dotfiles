@@ -8,7 +8,9 @@
       initContent = lib.mkMerge [
         (lib.mkOrder 500 ''
          # Early initialization, e.g. setting variables
-         export FZF_CTRL_T_COMMAND=""
+          if [ -e "$HOME/.nix-profile/etc/profile.d/nix.sh" ];
+            then source "$HOME/.nix-profile/etc/profile.d/nix.sh"
+          fi
          '')
         (lib.mkOrder 1500 ''
          # Late initialization

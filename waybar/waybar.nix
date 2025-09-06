@@ -10,6 +10,18 @@
           modules-left = [
             "hyprland/workspaces"
           ];
+          modules-center = [
+            "clock"
+            "custom/update"
+          ];
+          modules-right = [
+            "group/tray-expander"
+            "bluetooth"
+            "network"
+            "pulseaudio"
+            "cpu"
+            "battery"
+          ];
           "hyprland/workspaces" = {
             format="{icon}";
             format-icons =  {

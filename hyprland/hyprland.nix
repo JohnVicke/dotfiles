@@ -27,9 +27,11 @@ in {
       "$mod" = "SUPER";
 
       bind = [
-        "$mod SHIFT, return, exec, chromium"
         "$mod, SPACE, exec, ${pkgs.fuzzel}/bin/fuzzel"
         "$mod, return, exec, ${pkgs.ghostty}/bin/ghostty"
+        "$mod, ESCAPE, exec, ${pkgs.hyprlock}/bin/hyprlock"
+
+        "$mod SHIFT, return, exec, chromium"
         "$mod SHIFT, Q, killactive"
         "$mod, F, fullscreen"
       ]
@@ -60,6 +62,10 @@ in {
           natural_scroll = true;
           clickfinger_behavior = true;
         };
+      };
+
+      decoration ={
+        rounding = 10; 
       };
     };
   };
